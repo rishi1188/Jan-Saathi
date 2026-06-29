@@ -7,7 +7,14 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(cors({ origin: ["http://localhost:3000", "http://localhost:3001"] }));
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://jan-saathi-frontend.vercel.app",
+    "https://jan-saathi-frontend-25eaeaeuu5-r55822148-1818s-projects.vercel.app"
+  ]
+}));
 app.use(express.json());
 
 // Request logger
