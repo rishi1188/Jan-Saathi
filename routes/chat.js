@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Anthropic = require("@anthropic-ai/sdk");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { searchSchemes } = require("../data/schemes");
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -84,8 +84,7 @@ router.post("/", async (req, res) => {
 
     // Build Gemini model
     // New (Working)
-const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite" });
-
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     // Build history for Gemini (role: user/model)
     const history = session.history.slice(-10).map((m) => ({
       role: m.role === "assistant" ? "model" : "user",
