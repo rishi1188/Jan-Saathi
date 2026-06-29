@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const Anthropic = require("@anthropic-ai/sdk");
 const { searchSchemes } = require("../data/schemes");
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
