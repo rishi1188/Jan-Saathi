@@ -1,4 +1,4 @@
-# 🙏 Jan Saathi — जन साथी
+#  Jan Saathi — जन साथी
 ### AI-Powered Citizen Services Assistant for India
 
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)
